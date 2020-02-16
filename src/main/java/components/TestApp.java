@@ -1,4 +1,4 @@
-package dad.javafx.components;
+package components;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -14,8 +14,10 @@ public class TestApp extends Application {
 		listSelector.setRightTitle("Participantes");
 		listSelector.getLeftItems().addAll("Perico", "Palotes", "Menganita", "Fulanita");
 		
+		MonthCalendar m = new MonthCalendar();
+		
 		BorderPane root = new BorderPane();
-		root.setCenter(listSelector);
+		root.setCenter(m);
 		primaryStage.setTitle("Custom components test app");
 		primaryStage.setScene(new Scene(root, 320, 200));
 		primaryStage.show();

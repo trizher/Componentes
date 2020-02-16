@@ -1,4 +1,4 @@
-package dad.javafx.components;
+package components;
 
 public class Main {
 

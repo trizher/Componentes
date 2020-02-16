@@ -1,4 +1,4 @@
-package dad.javafx.components;
+package components;
 
 import java.io.IOException;
 import java.net.URL;
