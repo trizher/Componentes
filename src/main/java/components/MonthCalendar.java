@@ -59,6 +59,7 @@ public class MonthCalendar extends VBox implements Initializable {
 				treintaYNueveLabel, cuarentaLabel, cuarentaYUnoLabel, cuarentaYDosLabel);
 
 		yearProperty.addListener((o, ov, nv) -> establecerMes());
+		monthProperty.addListener((o, ov, nv) -> establecerMes());
 	}
 
 	private void establecerMes() {
