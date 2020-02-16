@@ -19,8 +19,8 @@ import javafx.scene.layout.VBox;
 
 public class MonthCalendar extends VBox implements Initializable {
 
-	private IntegerProperty yearProperty = new SimpleIntegerProperty();
-	private IntegerProperty monthProperty = new SimpleIntegerProperty();
+	private IntegerProperty year = new SimpleIntegerProperty();
+	private IntegerProperty month = new SimpleIntegerProperty();
 	private ListProperty<Label> labelList = new SimpleListProperty<Label>(FXCollections.observableArrayList());
 	private final int DIF_DIAS = 1;
 
@@ -58,20 +58,25 @@ public class MonthCalendar extends VBox implements Initializable {
 				treintaYCuatroLabel, treintaYCincoLabel, treintaYSeisLabel, treintaYSieteLabel, treintaYOchoLabel,
 				treintaYNueveLabel, cuarentaLabel, cuarentaYUnoLabel, cuarentaYDosLabel);
 
-		yearProperty.addListener((o, ov, nv) -> establecerMes());
-		monthProperty.addListener((o, ov, nv) -> establecerMes());
+		year.addListener((o, ov, nv) -> establecerMes());
+		month.addListener((o, ov, nv) -> establecerMes());
 	}
 
 	private void establecerMes() {
-		LocalDate localDate = LocalDate.of(yearProperty.get(), monthProperty.get(), 1);
-		int diasMes = YearMonth.of(yearProperty.getValue(), monthProperty.getValue()).lengthOfMonth();
+		LocalDate localDate = LocalDate.of(year.get(), month.get(), 1);
+		
+		
+		int diasMes = YearMonth.of(year.getValue(), month.getValue()).lengthOfMonth();
+		
 		int comienzoMes = localDate.getDayOfWeek().getValue() - DIF_DIAS;
+		
+		limpiarLabels();
 
-		for (int i = comienzoMes, j = 1; i < diasMes; i++, j++) {
+		for (int i = comienzoMes, j = 1; j < diasMes + 1; i++, j++) {
 			labelList.get(i).setText(String.valueOf(j));
 		}
 
-		int numeroMes = monthProperty.get();
+		int numeroMes = month.get();
 		if (numeroMes == 1) {
 			monthLabel.setText("Enero");
 		} else if (numeroMes == 2) {
@@ -100,28 +105,43 @@ public class MonthCalendar extends VBox implements Initializable {
 
 	}
 
-	public IntegerProperty monthPropertyProperty() {
-		return this.monthProperty;
+	private void limpiarLabels() {
+		for (int i = 0; i < labelList.size(); i++) {
+			labelList.get(i).setText("");
+		}
+		
 	}
 
-	public int getMonthProperty() {
-		return this.monthPropertyProperty().get();
+	public IntegerProperty yearProperty() {
+		return this.year;
 	}
-
-	public void setMonthProperty(final int monthProperty) {
-		this.monthPropertyProperty().set(monthProperty);
-	}
-
-	public IntegerProperty yearPropertyProperty() {
-		return this.yearProperty;
-	}
+	
 
 	public int getYearProperty() {
-		return this.yearPropertyProperty().get();
+		return this.yearProperty().get();
 	}
+	
 
-	public void setYearProperty(final int yearProperty) {
-		this.yearPropertyProperty().set(yearProperty);
+	public void setYearProperty(final int year) {
+		this.yearProperty().set(year);
 	}
+	
+
+	public IntegerProperty monthProperty() {
+		return this.month;
+	}
+	
+
+	public int getMonthProperty() {
+		return this.monthProperty().get();
+	}
+	
+
+	public void setMonthProperty(final int month) {
+		this.monthProperty().set(month);
+	}
+	
+
+
 
 }
