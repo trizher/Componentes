@@ -23,6 +23,7 @@ public class MonthCalendar extends VBox implements Initializable {
 	private IntegerProperty month = new SimpleIntegerProperty();
 	private ListProperty<Label> labelList = new SimpleListProperty<Label>(FXCollections.observableArrayList());
 	private final int DIF_DIAS = 1;
+	private Label today;
 
 	@FXML
 	private VBox view;
@@ -71,9 +72,21 @@ public class MonthCalendar extends VBox implements Initializable {
 		int comienzoMes = localDate.getDayOfWeek().getValue() - DIF_DIAS;
 		
 		limpiarLabels();
+		
+		for (int i = 0; i < labelList.getSize(); i++) {
+			if(labelList.get(i).equals(today)) {
+				labelList.get(i).getStyleClass().remove("today");
+			}
+		}
 
 		for (int i = comienzoMes, j = 1; j < diasMes + 1; i++, j++) {
 			labelList.get(i).setText(String.valueOf(j));
+			if(LocalDate.now().getYear() == year.get() 
+					&& LocalDate.now().getMonthValue() == month.get() 
+					&& j == LocalDate.now().getDayOfMonth()) {
+				labelList.get(i).getStyleClass().add("today");
+				today = labelList.get(i);
+			}
 		}
 
 		int numeroMes = month.get();

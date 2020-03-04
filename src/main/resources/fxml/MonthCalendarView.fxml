@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -8,7 +9,7 @@
 
 <fx:root fx:id="view" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" type="VBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="monthLabel" text="Label" />
+      <Label fx:id="monthLabel" styleClass="month" text="Label" />
       <GridPane alignment="CENTER" prefHeight="115.0" prefWidth="200.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -29,55 +30,79 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="TOP_LEFT" text="L" GridPane.halignment="CENTER" />
-            <Label text="M" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-            <Label text="X" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-            <Label text="J" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
-            <Label text="V" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
-            <Label text="S" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
-            <Label text="D" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
-            <Label fx:id="unoLabel" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="dosLabel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="tresLabel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="cuatroLabel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="cincoLabel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="seisLabel" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="sieteLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="ochoLabel" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label fx:id="nueveLabel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label fx:id="diezLabel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label fx:id="onceLabel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label fx:id="doceLabel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label fx:id="treceLabel" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label fx:id="catorceLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label fx:id="quinceLabel" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label fx:id="dieciseisLabel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label fx:id="diecisieteLabel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label fx:id="dieciochoLabel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label fx:id="diecinueveLabel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label fx:id="veinteLabel" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label fx:id="veintiunoLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label fx:id="veintidosLabel" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label fx:id="veintitresLabel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label fx:id="veinticuatroLabel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label fx:id="veinticincoLabel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label fx:id="veintiseisLabel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label fx:id="veintisieteLabel" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label fx:id="veintiochoLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label fx:id="veintinueveLabel" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label fx:id="treintaLabel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label fx:id="treintaYUnoLabel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label fx:id="treintaYDosLabel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label fx:id="treintaYTresLabel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label fx:id="treintaYCuatroLabel" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label fx:id="treintaYCincoLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label fx:id="treintaYSeisLabel" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <Label fx:id="treintaYSieteLabel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <Label fx:id="treintaYOchoLabel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <Label fx:id="treintaYNueveLabel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <Label fx:id="cuarentaLabel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <Label fx:id="cuarentaYUnoLabel" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <Label fx:id="cuarentaYDosLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label alignment="TOP_LEFT" styleClass="weekday" text="L" GridPane.halignment="CENTER" />
+            <Label styleClass="weekday" text="M" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label styleClass="weekday" text="X" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Label styleClass="weekday" text="J" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+            <Label styleClass="weekday" text="V" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+            <Label styleClass="weekday" text="S" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+            <Label text="D" GridPane.columnIndex="6" GridPane.halignment="CENTER">
+               <styleClass>
+                  <String fx:value="weekday" />
+                  <String fx:value="sunday" />
+               </styleClass></Label>
+            <Label fx:id="unoLabel" styleClass="day" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="dosLabel" styleClass="day" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="tresLabel" styleClass="day" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="cuatroLabel" styleClass="day" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="cincoLabel" styleClass="day" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="seisLabel" styleClass="day" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="sieteLabel" styleClass="day, sunday" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="ochoLabel" styleClass="day" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="nueveLabel" styleClass="day" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="diezLabel" styleClass="day" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="onceLabel" styleClass="day" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="doceLabel" styleClass="day" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="treceLabel" styleClass="day" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="catorceLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="day" />
+                  <String fx:value="sunday" />
+               </styleClass></Label>
+            <Label fx:id="quinceLabel" styleClass="day" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="dieciseisLabel" styleClass="day" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="diecisieteLabel" styleClass="day" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="dieciochoLabel" styleClass="day" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="diecinueveLabel" styleClass="day" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="veinteLabel" styleClass="day" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="veintiunoLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <styleClass>
+                  <String fx:value="day" />
+                  <String fx:value="sunday" />
+               </styleClass></Label>
+            <Label fx:id="veintidosLabel" styleClass="day" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="veintitresLabel" styleClass="day" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="veinticuatroLabel" styleClass="day" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="veinticincoLabel" styleClass="day" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="veintiseisLabel" styleClass="day" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="veintisieteLabel" styleClass="day" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="veintiochoLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <styleClass>
+                  <String fx:value="day" />
+                  <String fx:value="sunday" />
+               </styleClass></Label>
+            <Label fx:id="veintinueveLabel" styleClass="day" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label fx:id="treintaLabel" styleClass="day" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label fx:id="treintaYUnoLabel" styleClass="day" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label fx:id="treintaYDosLabel" styleClass="day" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label fx:id="treintaYTresLabel" styleClass="day" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label fx:id="treintaYCuatroLabel" styleClass="day" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label fx:id="treintaYCincoLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <styleClass>
+                  <String fx:value="day" />
+                  <String fx:value="sunday" />
+               </styleClass></Label>
+            <Label fx:id="treintaYSeisLabel" styleClass="day" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="treintaYSieteLabel" styleClass="day" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="treintaYOchoLabel" styleClass="day" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="treintaYNueveLabel" styleClass="day" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="cuarentaLabel" styleClass="day" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="cuarentaYUnoLabel" styleClass="day" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="cuarentaYDosLabel" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+               <styleClass>
+                  <String fx:value="day" />
+                  <String fx:value="sunday" />
+               </styleClass></Label>
          </children>
       </GridPane>
    </children>
